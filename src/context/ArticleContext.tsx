@@ -10,8 +10,8 @@ import { TArticle } from '@/common/type'
 
 export const ArticleContext = createContext<{
   article: TArticle | null
-  setArticle: Dispatch<SetStateAction<TArticle | null>> | null
-}>({ article: null, setArticle: null })
+  setArticle: Dispatch<SetStateAction<TArticle | null>>
+}>({ article: null, setArticle: () => {} })
 
 export const ArticleProvider = ({ children }: { children: ReactNode }) => {
   const [article, setArticle] = useState<TArticle | null>(null)
