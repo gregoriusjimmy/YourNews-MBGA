@@ -4,8 +4,8 @@ import { useRouter } from 'next/router'
 const defaultMeta = {
   title: 'YourNews',
   siteName: 'YourNews',
-  description: 'Serve the best news for your daily',
-  url: 'https://tsnext-tw.thcl.dev',
+  description: 'Serve the best news for your daily needs',
+  url: 'https://gregoriusjimmy.com/',
   type: 'website',
   robots: 'follow, index',
   image: '/image.png',
