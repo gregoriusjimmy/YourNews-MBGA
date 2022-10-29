@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-primary-500: #4e69d0;
+  --color-primary-400: #7187d9;
+  --white-bg: #fdfdfd;
+}
+
+@layer base {
+  /* inter var - latin */
+
+  .cursor-newtab {
+    cursor: url('/images/new-tab.png') 10 10, pointer;
+  }
+
+  /* #region  /**=========== Typography =========== */
+  .h0 {
+    @apply font-primary text-3xl  md:text-5xl;
+  }
+
+  h1,
+  .h1 {
+    @apply font-primary text-2xl  md:text-4xl;
+  }
+
+  h2,
+  .h2 {
+    @apply font-primary text-xl  md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply font-primary text-lg  md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply font-primary text-base  md:text-lg;
+  }
+
+  body,
+  p,
+  .p {
+    @apply font-secondary text-sm leading-relaxed md:text-base md:leading-relaxed;
+  }
+  /* #endregion  /**======== Typography =========== */
+
+  .layout {
+    /* 1100px */
+    max-width: 68.75rem;
+    @apply mx-auto w-11/12;
+  }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
+}
+
+@layer utilities {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .animated-underline {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(
+        to right,
+        var(--color-primary-400),
+        var(--color-primary-500)
+      );
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .animated-underline {
+      transition: 0.3s ease;
+      transition-property: background-size, color, background-color,
+        border-color;
+    }
+  }
+  .animated-underline:hover,
+  .animated-underline:focus-visible {
+    background-size: 0 2px, 100% 2px;
+  }
+}
